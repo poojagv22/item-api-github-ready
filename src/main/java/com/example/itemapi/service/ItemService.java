@@ -24,4 +24,13 @@ public class ItemService {
                 .filter(i -> i.getId().equals(id))
                 .findFirst();
     }
+
+    public List<Item> getAllItems() {
+        return items;
+    }
+
+    public void deleteItem(Long id) {
+        items.removeIf(item -> item.getId().equals(id));
+    }
 }
+
